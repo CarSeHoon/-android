@@ -1,0 +1,99 @@
+<layout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  >
+    <data>
+        <variable
+          name="vm"
+          type="com.example.teamproject.recycler.RecyclerViewModel"
+          />
+    </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".recycler.RecyclerActivity"
+    >
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="                              초대"
+      android:textColor="@color/purple_200"
+      android:textSize="25dp"
+      tools:ignore="MissingConstraints"
+      />
+
+    <EditText
+      android:id="@+id/editemail"
+      android:layout_width="300dp"
+      android:layout_height="40dp"
+      android:layout_marginTop="40dp"
+      android:ems="10"
+      android:hint="                     이메일 입력"
+      android:inputType="textPersonName"
+      android:text="@={vm.inputText}"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      />
+
+    <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="#00ff0000"
+      android:text="초대"
+      android:textColor="@color/black"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.304"
+      app:layout_constraintStart_toEndOf="@+id/editemail"
+      tools:ignore="MissingConstraints"
+      tools:layout_editor_absoluteY="40dp"
+      />
+
+    <LinearLayout
+      android:id="@+id/linearLayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="80dp"
+      android:layout_marginBottom="50dp"
+      android:orientation="horizontal"
+      >
+
+      <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        />
+
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:userAccounts="@{vm.userLiveData}"
+        />
+
+    </LinearLayout>
+
+    <Button
+      android:id="@+id/btn_invite"
+      android:layout_width="wrap_content"
+      android:layout_height="40dp"
+      android:layout_gravity="center"
+      android:background="#00ff0000"
+      android:text="초대 완료"
+      android:textColor="@color/white"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      tools:ignore="MissingConstraints"
+      />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

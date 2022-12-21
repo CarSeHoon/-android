@@ -1,0 +1,925 @@
+<layout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  >
+
+  <data>
+    <variable
+      name="vm"
+      type="com.example.teamproject.score.ScoreViewModel"
+      />
+  </data>
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".recycler.RecyclerActivity"
+    >
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="2"
+      android:text="스코어"
+      android:textColor="@color/purple_200"
+      android:textSize="25dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      tools:ignore="MissingConstraints"
+      />
+
+    <TableLayout
+      android:id="@+id/tableLayout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="80dp"
+      android:stretchColumns="*"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:ignore="MissingConstraints"
+      >
+
+      <TableRow>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="Hole"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="1"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="2"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="3"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="4"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="5"
+          android:textColor="#FFFFFF"
+          android:textSize="24sp"
+          />
+      </TableRow>
+
+      <TableRow>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="Par"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="4"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="4"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="3"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="4"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="5"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+      </TableRow>
+
+      <TableRow>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:text="Score"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <EditText
+          android:id="@+id/par1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par1}"
+          />
+
+        <EditText
+          android:id="@+id/par2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par2}"
+          />
+
+        <EditText
+          android:id="@+id/par3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par3}"
+          />
+
+        <EditText
+          android:id="@+id/par4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par4}"
+          />
+
+        <EditText
+          android:id="@+id/par5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par5}"
+          />
+      </TableRow>
+    </TableLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="2"
+      android:text="스코어"
+      android:textColor="@color/purple_200"
+      android:textSize="25dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      tools:ignore="MissingConstraints"
+      />
+
+    <TableLayout
+      android:id="@+id/tableLayout2"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:stretchColumns="*"
+      app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+      tools:ignore="MissingConstraints"
+      >
+
+      <TableRow>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="Hole"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="6"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="7"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="8"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="9"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="T"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+      </TableRow>
+
+      <TableRow>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="Par"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="3"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="5"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="4"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="4"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="36"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+      </TableRow>
+
+      <TableRow>
+
+        <EditText
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:text="Score"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <EditText
+          android:id="@+id/par6"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par6}"
+          />
+
+        <EditText
+          android:id="@+id/par7"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par7}"
+          />
+
+        <EditText
+          android:id="@+id/par8"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par8}"
+          />
+
+        <EditText
+          android:id="@+id/par9"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par9}"
+          />
+
+        <EditText
+          android:id="@+id/Total1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@{vm.total1}"
+          />
+      </TableRow>
+    </TableLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="2"
+      android:text="스코어"
+      android:textColor="@color/purple_200"
+      android:textSize="25dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      tools:ignore="MissingConstraints"
+      />
+
+    <TableLayout
+      android:id="@+id/tableLayout3"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:stretchColumns="*"
+      app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+      tools:ignore="MissingConstraints"
+      >
+
+      <TableRow>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="Hole"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="10"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="11"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="12"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="13"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="14"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+      </TableRow>
+
+      <TableRow>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="Par"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="5"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="4"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="4"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="3"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="4"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+      </TableRow>
+
+      <TableRow>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:text="Score"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <EditText
+          android:id="@+id/par10"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par10}"
+          />
+
+        <EditText
+          android:id="@+id/par11"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par11}"
+          />
+
+        <EditText
+          android:id="@+id/par12"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par12}"
+          />
+
+        <EditText
+          android:id="@+id/par13"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par13}"
+          />
+
+        <EditText
+          android:id="@+id/par14"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par14}"
+          />
+      </TableRow>
+    </TableLayout>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="2"
+      android:text="스코어"
+      android:textColor="@color/purple_200"
+      android:textSize="25dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      tools:ignore="MissingConstraints"
+      />
+
+    <TableLayout
+      android:id="@+id/tableLayout4"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:stretchColumns="*"
+      app:layout_constraintTop_toBottomOf="@+id/tableLayout3"
+      tools:ignore="MissingConstraints"
+      >
+
+      <TableRow>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="Hole"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="15"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="16"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="17"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="18"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#87CEFA"
+          android:gravity="center"
+          android:text="T"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+      </TableRow>
+
+      <TableRow>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="Par"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="4"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="4"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="3"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="5"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#FFF0F5"
+          android:gravity="center"
+          android:text="72"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+      </TableRow>
+
+      <TableRow>
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:text="Score"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          />
+
+        <EditText
+          android:id="@+id/par15"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par15}"
+          />
+
+        <EditText
+          android:id="@+id/par16"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par16}"
+          />
+
+        <EditText
+          android:id="@+id/par17"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par17}"
+          />
+
+        <EditText
+          android:id="@+id/par18"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@={vm.par18}"
+          />
+
+        <EditText
+          android:id="@+id/Total2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="#AFEEEE"
+          android:gravity="center"
+          android:inputType="textPersonName"
+          android:textColor="#000000"
+          android:textSize="24sp"
+          android:text="@{vm.total2}"
+          />
+      </TableRow>
+    </TableLayout>
+
+    <Button
+      android:id="@+id/btn_finish"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="#00ff0000"
+      android:text="경기 종료"
+      android:textColor="@color/white"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tableLayout4"
+      />
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
